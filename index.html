@@ -1,0 +1,1115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Maharasi M - MCA Student & Aspiring Software Developer Portfolio. Skilled in Python, OpenCV, MediaPipe, SQL, HTML, CSS, and Data Analytics.">
+  <meta name="keywords" content="Maharasi M, Software Developer, MCA, Computer Vision, Python Developer, Tirunelveli, Portfolio">
+  <meta name="author" content="Maharasi M">
+  <meta property="og:title" content="Maharasi M | MCA Student & Aspiring Software Developer">
+  <meta property="og:description" content="Explore my projects in Real-Time AI Computer Vision, academic journey, certified skills, and contact details.">
+  <title>Maharasi M | MCA Student & Aspiring Software Developer</title>
+
+  <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Core Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Background Lighting & Canvas -->
+  <canvas id="bg-canvas"></canvas>
+  <div class="ambient-glow ambient-glow-1"></div>
+  <div class="ambient-glow ambient-glow-2"></div>
+  <div class="ambient-glow ambient-glow-3"></div>
+  <div class="bg-grid-pattern"></div>
+
+  <!-- Top Scroll Progress Bar -->
+  <div class="scroll-progress-container">
+    <div class="scroll-progress-bar"></div>
+  </div>
+
+  <!-- ==========================================================================
+       Header & Navigation Bar
+       ========================================================================== -->
+  <header class="header">
+    <div class="container nav-container">
+      <a href="#home" class="brand-logo" aria-label="Maharasi M Home">
+        <span class="brand-badge">&lt;M/&gt;</span>
+        <span class="brand-text">MAHARASI<span class="brand-domain">.dev</span></span>
+      </a>
+
+      <nav class="nav-menu" id="nav-menu">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#education" class="nav-link">Education</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#certifications" class="nav-link">Certificates</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button type="button" class="btn btn-secondary open-resume-modal">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+          <span>Resume</span>
+        </button>
+        <a href="#contact" class="btn btn-primary">
+          <span>Let's Connect</span>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </a>
+        <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       Hero / Home Section
+       ========================================================================== -->
+  <section class="hero-section" id="home">
+    <div class="container hero-grid">
+      <div class="hero-content reveal">
+        <div class="status-badge">
+          <span class="status-pulse"></span>
+          <span>Open to Internship & Developer Opportunities</span>
+        </div>
+
+        <h1 class="hero-title">
+          Hi, I'm <span class="text-gradient">Maharasi M</span>
+        </h1>
+
+        <div class="hero-typing-wrap">
+          <span class="typing-prefix">&gt;</span>
+          <span class="typed-text" id="typed-text"></span>
+          <span class="cursor-blink"></span>
+        </div>
+
+        <p class="hero-description">
+          Motivated MCA student with a strong interest in <strong>software development</strong> and <strong>data analytics</strong>. Seeking an internship opportunity to apply my technical skills, gain practical experience, and contribute to real-world projects.
+        </p>
+
+        <div class="hero-cta-group">
+          <a href="#projects" class="btn btn-primary">
+            <span>Explore Projects</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+          </a>
+          <button type="button" class="btn btn-outline-cyan open-resume-modal">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span>View Resume</span>
+          </button>
+          <a href="https://www.linkedin.com/in/maharasi-m-637954370?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" title="View LinkedIn Profile">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            <span>LinkedIn</span>
+          </a>
+        </div>
+
+        <div class="hero-meta-badges">
+          <div class="meta-item">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+            <span>Francis Xavier Eng. College (MCA)</span>
+          </div>
+          <div class="meta-item">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>Tirunelveli, Tamil Nadu</span>
+          </div>
+          <div class="meta-item">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+            <span>AI Computer Vision & Python</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Visual Card -->
+      <div class="hero-visual-card reveal reveal-delay-1">
+        <div class="floating-pill pill-1">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m10 15 5-3-5-3v6Z"/></svg>
+          <span>OpenCV • MediaPipe</span>
+        </div>
+        <div class="floating-pill pill-2">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          <span>SQL & Database Modeling</span>
+        </div>
+
+        <div class="hero-card-inner">
+          <div class="profile-avatar-wrap">
+            <div class="avatar-initials">
+              <span>MM</span>
+              <span class="avatar-status-dot" title="Available for opportunities"></span>
+            </div>
+            <div class="avatar-info">
+              <h3>Maharasi M</h3>
+              <p>MCA Student | Developer</p>
+            </div>
+          </div>
+
+          <div class="hero-card-stats">
+            <div class="stat-box">
+              <div class="stat-box-val">83%</div>
+              <div class="stat-box-lbl">BCA Academic Score</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-box-val">87.67%</div>
+              <div class="stat-box-lbl">HSC Higher Secondary</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-box-val">3+</div>
+              <div class="stat-box-lbl">Verified Certificates</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-box-val">AI & CV</div>
+              <div class="stat-box-lbl">Real-Time ML Focus</div>
+            </div>
+          </div>
+
+          <!-- Mini Terminal View -->
+          <div class="hero-terminal">
+            <div class="terminal-header">
+              <span class="term-dot red"></span>
+              <span class="term-dot yellow"></span>
+              <span class="term-dot green"></span>
+              <span>maharasi@dev:~$</span>
+            </div>
+            <div class="term-line">
+              <span class="term-cmd">$ python --version</span>
+            </div>
+            <div class="term-line">
+              <span class="term-out">&gt; Python 3.x (OpenCV, MediaPipe, Pygame)</span>
+            </div>
+            <div class="term-line">
+              <span class="term-cmd">$ cat status.txt</span>
+            </div>
+            <div class="term-line">
+              <span class="term-out">&gt; Pursuing MCA | Ready for Internships 🚀</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       About Me Section (Styled after Reference Image 5)
+       ========================================================================== -->
+  <section class="about-section" id="about">
+    <div class="container">
+      <!-- Reference Image 5 Style Stat Cards Grid -->
+      <div class="about-stats-grid reveal">
+        <div class="metric-card">
+          <div class="metric-icon-wrap">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+          </div>
+          <div class="metric-info">
+            <h4>MCA</h4>
+            <p>Master of Computer Applications</p>
+          </div>
+        </div>
+
+        <div class="metric-card">
+          <div class="metric-icon-wrap">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+          </div>
+          <div class="metric-info">
+            <h4>3+</h4>
+            <p>Industry Certifications</p>
+          </div>
+        </div>
+
+        <div class="metric-card">
+          <div class="metric-icon-wrap">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <div class="metric-info">
+            <h4>83%</h4>
+            <p>BCA Academic Standing</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-tag reveal">// ABOUT ME</div>
+      <h2 class="section-title reveal">
+        Hey — this is <span class="text-gradient">about me!</span>
+      </h2>
+      <p class="section-subtitle reveal">
+        A glimpse into who I am, what drives me, and the technical journey so far.
+      </p>
+
+      <div class="about-main-card reveal reveal-delay-1">
+        <p class="about-bio-text">
+          Hi! My name is <strong>Maharasi M</strong>, a motivated <span class="highlight-cyan">MCA student</span> and aspiring software developer based in <strong>Tirunelveli, Tamil Nadu</strong>. I have a foundational passion for <span class="highlight-purple">software engineering</span>, <span class="highlight-cyan">data analytics</span>, and modern technologies.
+        </p>
+        <p class="about-bio-text">
+          During my undergraduate studies in <strong>Bachelor of Computer Applications (BCA)</strong> at St. John's College, I graduated with <strong>83%</strong> and developed practical experience in programming, databases, and problem-solving. Currently pursuing my <strong>MCA at Francis Xavier Engineering College</strong>, I have expanded my domain expertise into <span class="highlight-cyan">computer vision</span>, <span class="highlight-purple">machine learning</span>, and backend concepts.
+        </p>
+        <p class="about-bio-text">
+          I am actively seeking an <strong>internship or entry-level software development / data analyst role</strong> where I can apply my core technical proficiencies, gain real-world industry experience, and contribute value to meaningful engineering projects.
+        </p>
+
+        <!-- Highlights Row -->
+        <div class="about-highlights-row">
+          <div class="highlight-box">
+            <div class="highlight-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            </div>
+            <div class="highlight-content">
+              <h5>Software & AI Development</h5>
+              <p>Hands-on building with Python, OpenCV, MediaPipe gesture recognition, and Pygame.</p>
+            </div>
+          </div>
+
+          <div class="highlight-box">
+            <div class="highlight-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+            </div>
+            <div class="highlight-content">
+              <h5>Databases & Analytics</h5>
+              <p>Experienced in SQL queries and certified in MongoDB Document Model schema design.</p>
+            </div>
+          </div>
+
+          <div class="highlight-box">
+            <div class="highlight-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            </div>
+            <div class="highlight-content">
+              <h5>Languages Known</h5>
+              <p><strong>Tamil:</strong> Native &bull; <strong>English:</strong> Professional Working Proficiency.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Education Section
+       ========================================================================== -->
+  <section class="education-section" id="education">
+    <div class="container">
+      <div class="section-tag reveal">// 02. ACADEMIC JOURNEY</div>
+      <h2 class="section-title reveal">
+        Education & <span class="text-gradient">Qualifications</span>
+      </h2>
+      <p class="section-subtitle reveal">
+        My formal academic background in computer applications and information technology.
+      </p>
+
+      <div class="education-timeline">
+        <!-- Item 1: MCA -->
+        <div class="edu-card reveal">
+          <div class="edu-node">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+          </div>
+          <div class="edu-card-content">
+            <div class="edu-card-header">
+              <h3 class="edu-degree">Master of Computer Applications (MCA)</h3>
+              <span class="edu-score-badge pursuing">Currently Pursuing</span>
+            </div>
+            <div class="edu-institution">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M3 10h18M5 6l7-3 7 3M4 10v11M20 10v11M8 14v4M12 14v4M16 14v4"/></svg>
+              <span>Francis Xavier Engineering College, Tirunelveli</span>
+            </div>
+            <div class="edu-meta-row">
+              <span>📅 2026 – Present</span>
+              <span>📍 Tirunelveli, Tamil Nadu</span>
+            </div>
+            <p class="edu-desc">
+              Currently pursuing Master of Computer Applications with an active focus in software development, data analytics, algorithmic problem solving, and modern computer systems.
+            </p>
+          </div>
+        </div>
+
+        <!-- Item 2: BCA -->
+        <div class="edu-card reveal reveal-delay-1">
+          <div class="edu-node">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+          </div>
+          <div class="edu-card-content">
+            <div class="edu-card-header">
+              <h3 class="edu-degree">Bachelor of Computer Applications (BCA)</h3>
+              <span class="edu-score-badge">Graduated: 83%</span>
+            </div>
+            <div class="edu-institution">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M3 10h18M5 6l7-3 7 3M4 10v11M20 10v11M8 14v4M12 14v4M16 14v4"/></svg>
+              <span>St. John's College, Tirunelveli</span>
+            </div>
+            <div class="edu-meta-row">
+              <span>📅 2023 – 2026</span>
+              <span>📍 Tirunelveli, Tamil Nadu</span>
+            </div>
+            <p class="edu-desc">
+              Completed Bachelor of Computer Applications with an aggregate score of 83%. Acquired rigorous fundamental foundations in programming languages, web technologies, database administration, and software methodologies.
+            </p>
+          </div>
+        </div>
+
+        <!-- Item 3: HSC -->
+        <div class="edu-card reveal reveal-delay-2">
+          <div class="edu-node">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 14 14"/></svg>
+          </div>
+          <div class="edu-card-content">
+            <div class="edu-card-header">
+              <h3 class="edu-degree">Higher Secondary Certificate (HSC)</h3>
+              <span class="edu-score-badge">Scored: 87.67%</span>
+            </div>
+            <div class="edu-institution">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M3 10h18M5 6l7-3 7 3M4 10v11M20 10v11M8 14v4M12 14v4M16 14v4"/></svg>
+              <span>Sarah Tucker Higher Secondary School, Tirunelveli</span>
+            </div>
+            <div class="edu-meta-row">
+              <span>📅 Completed in 2023</span>
+              <span>📍 Tirunelveli, Tamil Nadu</span>
+            </div>
+            <p class="edu-desc">
+              Achieved high academic distinction with 87.67% in Higher Secondary education, establishing disciplined analytical thinking and mathematical problem-solving skills.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Skills Section
+       ========================================================================== -->
+  <section class="skills-section" id="skills">
+    <div class="container">
+      <div class="section-tag reveal">// 03. TECHNICAL CAPABILITIES</div>
+      <h2 class="section-title reveal">
+        Skills & <span class="text-gradient">Technologies</span>
+      </h2>
+      <p class="section-subtitle reveal">
+        Categorized technical skills directly reflected from my verified academic and project experience.
+      </p>
+
+      <!-- Category Filter Tabs -->
+      <div class="skills-filter-nav reveal">
+        <button class="skill-filter-btn active" data-filter="all">All Skills</button>
+        <button class="skill-filter-btn" data-filter="programming">Programming & Web</button>
+        <button class="skill-filter-btn" data-filter="ai-vision">AI & Computer Vision</button>
+        <button class="skill-filter-btn" data-filter="database-tools">Database & Tools</button>
+      </div>
+
+      <!-- Skills Cards Grid -->
+      <div class="skills-grid reveal reveal-delay-1">
+        <!-- Python -->
+        <div class="skill-card" data-category="programming">
+          <div class="skill-card-top">
+            <div class="skill-icon-box" style="color: #38bdf8;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m10 20-6-6 6-6"/><path d="m14 4 6 6-6 6"/></svg>
+            </div>
+            <span class="skill-category-tag">Programming</span>
+          </div>
+          <h4 class="skill-name">Python</h4>
+          <p class="skill-role-desc">Primary programming language used for computer vision pipelines, ML scripting, data manipulation, and Pygame applications.</p>
+          <div class="skill-level-bar-wrap">
+            <div class="skill-level-header">
+              <span>Proficiency</span>
+              <span>Advanced / Core</span>
+            </div>
+            <div class="skill-progress-track">
+              <div class="skill-progress-fill" style="width: 88%;"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- C Language -->
+        <div class="skill-card" data-category="programming">
+          <div class="skill-card-top">
+            <div class="skill-icon-box" style="color: #818cf8;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            </div>
+            <span class="skill-category-tag">Programming</span>
+          </div>
+          <h4 class="skill-name">C</h4>
+          <p class="skill-role-desc">Strong procedural foundation in low-level memory concepts, data structures, pointer mechanics, and algorithmic efficiency.</p>
+          <div class="skill-level-bar-wrap">
+            <div class="skill-level-header">
+              <span>Proficiency</span>
+              <span>Fundamental</span>
+            </div>
+            <div class="skill-progress-track">
+              <div class="skill-progress-fill" style="width: 78%;"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- HTML & CSS -->
+        <div class="skill-card" data-category="programming">
+          <div class="skill-card-top">
+            <div class="skill-icon-box" style="color: #f97316;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg>
+            </div>
+            <span class="skill-category-tag">Web Technologies</span>
+          </div>
+          <h4 class="skill-name">HTML & CSS</h4>
+          <p class="skill-role-desc">Building clean, semantic markup, responsive UI layouts, CSS Flexbox/Grid systems, and modern styling architectures.</p>
+          <div class="skill-level-bar-wrap">
+            <div class="skill-level-header">
+              <span>Proficiency</span>
+              <span>Proficient</span>
+            </div>
+            <div class="skill-progress-track">
+              <div class="skill-progress-fill" style="width: 85%;"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- OpenCV -->
+        <div class="skill-card" data-category="ai-vision">
+          <div class="skill-card-top">
+            <div class="skill-icon-box" style="color: #00f2fe;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12h20"/><circle cx="12" cy="12" r="7"/><circle cx="12" cy="12" r="3"/></svg>
+            </div>
+            <span class="skill-category-tag">Computer Vision</span>
+          </div>
+          <h4 class="skill-name">OpenCV</h4>
+          <p class="skill-role-desc">Real-time video stream capture, webcam feed matrix manipulation, color conversion, spatial thresholds, and image filtering.</p>
+          <div class="skill-level-bar-wrap">
+            <div class="skill-level-header">
+              <span>Proficiency</span>
+              <span>Applied / Project</span>
+            </div>
+            <div class="skill-progress-track">
+              <div class="skill-progress-fill" style="width: 85%;"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- MediaPipe -->
+        <div class="skill-card" data-category="ai-vision">
+          <div class="skill-card-top">
+            <div class="skill-icon-box" style="color: #a855f7;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 11V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v0"/><path d="M14 10V4a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v2"/><path d="M10 10.5V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v8"/><path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"/></svg>
+            </div>
+            <span class="skill-category-tag">Computer Vision</span>
+          </div>
+          <h4 class="skill-name">MediaPipe</h4>
+          <p class="skill-role-desc">Multi-hand landmark detection, 21-coordinate 3D hand tracking, low-latency landmark extraction, and spatial gesture vector calculation.</p>
+          <div class="skill-level-bar-wrap">
+            <div class="skill-level-header">
+              <span>Proficiency</span>
+              <span>Applied / Project</span>
+            </div>
+            <div class="skill-progress-track">
+              <div class="skill-progress-fill" style="width: 82%;"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- AI & ML Basics -->
+        <div class="skill-card" data-category="ai-vision">
+          <div class="skill-card-top">
+            <div class="skill-icon-box" style="color: #ec4899;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a4 4 0 0 0-4 4v1a4 4 0 0 0 8 0V6a4 4 0 0 0-4-4Z"/><path d="M8 12a4 4 0 0 0-4 4v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2a4 4 0 0 0-4-4H8Z"/></svg>
+            </div>
+            <span class="skill-category-tag">Artificial Intelligence</span>
+          </div>
+          <h4 class="skill-name">AI & ML Basics</h4>
+          <p class="skill-role-desc">Core supervised and unsupervised learning principles, classification models, feature engineering, and model evaluation metrics.</p>
+          <div class="skill-level-bar-wrap">
+            <div class="skill-level-header">
+              <span>Proficiency</span>
+              <span>Certified Training</span>
+            </div>
+            <div class="skill-progress-track">
+              <div class="skill-progress-fill" style="width: 80%;"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SQL Database -->
+        <div class="skill-card" data-category="database-tools">
+          <div class="skill-card-top">
+            <div class="skill-icon-box" style="color: #3b82f6;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+            </div>
+            <span class="skill-category-tag">Database</span>
+          </div>
+          <h4 class="skill-name">SQL</h4>
+          <p class="skill-role-desc">Writing structured queries, JOIN operations, aggregations, schema design, subqueries, and table constraints for relational data stores.</p>
+          <div class="skill-level-bar-wrap">
+            <div class="skill-level-header">
+              <span>Proficiency</span>
+              <span>Intermediate</span>
+            </div>
+            <div class="skill-progress-track">
+              <div class="skill-progress-fill" style="width: 82%;"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Developer Tools: VS Code & Git -->
+        <div class="skill-card" data-category="database-tools">
+          <div class="skill-card-top">
+            <div class="skill-icon-box" style="color: #10b981;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="18" r="3"/><circle cx="6" cy="6" r="3"/><path d="M6 21V9a9 9 0 0 0 9 9"/></svg>
+            </div>
+            <span class="skill-category-tag">Developer Tools</span>
+          </div>
+          <h4 class="skill-name">Git & VS Code</h4>
+          <p class="skill-role-desc">Source code version control with Git (branching, commits, staging), paired with modern development and debugging in VS Code.</p>
+          <div class="skill-level-bar-wrap">
+            <div class="skill-level-header">
+              <span>Proficiency</span>
+              <span>Daily Workflow</span>
+            </div>
+            <div class="skill-progress-track">
+              <div class="skill-progress-fill" style="width: 84%;"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Jupyter Notebook -->
+        <div class="skill-card" data-category="database-tools">
+          <div class="skill-card-top">
+            <div class="skill-icon-box" style="color: #f59e0b;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="9" y1="3" x2="9" y2="21"/></svg>
+            </div>
+            <span class="skill-category-tag">Analytics Tools</span>
+          </div>
+          <h4 class="skill-name">Jupyter Notebook</h4>
+          <p class="skill-role-desc">Interactive computational environment for running rapid Python prototyping, data visualization, and exploratory analysis.</p>
+          <div class="skill-level-bar-wrap">
+            <div class="skill-level-header">
+              <span>Proficiency</span>
+              <span>Data & Experiments</span>
+            </div>
+            <div class="skill-progress-track">
+              <div class="skill-progress-fill" style="width: 82%;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Projects Section (Interactive Showcase with Simulator)
+       ========================================================================== -->
+  <section class="projects-section" id="projects">
+    <div class="container">
+      <div class="section-tag reveal">// 04. FEATURED PROJECT</div>
+      <h2 class="section-title reveal">
+        Interactive <span class="text-gradient">Project Showcase</span>
+      </h2>
+      <p class="section-subtitle reveal">
+        An in-depth look at my major engineering project integrating Computer Vision, AI, and Game Physics.
+      </p>
+
+      <div class="project-showcase-card reveal reveal-delay-1">
+        <!-- Top bar with tabs -->
+        <div class="project-card-header">
+          <div class="project-badge-group">
+            <span class="project-status-pill">⭐ Featured AI System</span>
+            <span class="text-muted" style="font-size: 0.85rem; font-family: var(--font-mono);">Real-Time Human-Computer Interface</span>
+          </div>
+
+          <div class="project-tabs-nav">
+            <button class="proj-tab-btn active" data-tab="tab-overview">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+              <span>Overview</span>
+            </button>
+            <button class="proj-tab-btn" data-tab="tab-sim">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              <span>Live Simulator</span>
+            </button>
+            <button class="proj-tab-btn" data-tab="tab-pipeline">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+              <span>Pipeline Architecture</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="project-card-body">
+          <div class="project-meta-info">
+            <h3>Gesture Controlled Gaming AI using Real-Time Computer Vision</h3>
+            <div class="project-tech-tags">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">Machine Learning</span>
+              <span class="tech-tag">OpenCV</span>
+              <span class="tech-tag">MediaPipe</span>
+              <span class="tech-tag">Pygame</span>
+            </div>
+          </div>
+
+          <!-- TAB 1: OVERVIEW -->
+          <div class="tab-content active" id="tab-overview">
+            <p style="color: var(--text-secondary); font-size: 1.05rem; line-height: 1.7; margin-bottom: 1.5rem;">
+              Developed an innovative Machine Learning-based touchless gesture recognition system that bridges physical human gestures directly to real-time car racing mechanics in Pygame, without requiring physical keyboard, mouse, or game controllers.
+            </p>
+
+            <div class="project-features-grid">
+              <div class="feature-box">
+                <h5>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m10 15 5-3-5-3v6Z"/></svg>
+                  <span>Real-Time Webcam Processing</span>
+                </h5>
+                <p>Processed continuous high-framerate live video feeds using <strong>OpenCV</strong>, ensuring smooth low-latency frame extraction and image thresholding.</p>
+              </div>
+
+              <div class="feature-box">
+                <h5>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 11V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v0"/><path d="M14 10V4a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v2"/><path d="M10 10.5V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v8"/></svg>
+                  <span>MediaPipe Landmark Tracking</span>
+                </h5>
+                <p>Utilized <strong>MediaPipe Hand Landmark model</strong> to locate 21 distinct anatomical hand points in 3D coordinate space for gesture tracking.</p>
+              </div>
+
+              <div class="feature-box">
+                <h5>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                  <span>Interactive Pygame Game Control</span>
+                </h5>
+                <p>Mapped classified hand gestures dynamically into Pygame keystroke events to steer left/right, accelerate forward, and brake the car smoothly.</p>
+              </div>
+
+              <div class="feature-box">
+                <h5>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                  <span>Seamless Human-Computer Interface</span>
+                </h5>
+                <p>Integrated vision-based recognition with the gaming runtime loop to deliver an immersive, touch-free interactive experience.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- TAB 2: LIVE SIMULATOR -->
+          <div class="tab-content" id="tab-sim">
+            <div class="simulator-container">
+              <div class="simulator-header">
+                <div>
+                  <strong style="color: var(--text-primary); font-size: 1rem;">Virtual Pygame Gesture Controller Demo</strong>
+                  <div style="color: var(--text-muted); font-size: 0.8rem; margin-top: 2px;">Simulating real-time AI recognition steering the vehicle</div>
+                </div>
+                <div class="sim-status">
+                  <span class="status-pulse"></span>
+                  <span id="sim-status-text">Neutral Hand Tracking (Holding Lane)</span>
+                </div>
+              </div>
+
+              <!-- Canvas Game -->
+              <div class="sim-game-canvas-wrap">
+                <canvas id="racing-canvas"></canvas>
+              </div>
+
+              <!-- Controls -->
+              <div class="sim-controls-panel">
+                <button type="button" class="gesture-btn" data-action="left">
+                  <span>👈 Tilt Left (Steer)</span>
+                </button>
+                <button type="button" class="gesture-btn" data-action="accelerate">
+                  <span>👆 Index Up (Accelerate)</span>
+                </button>
+                <button type="button" class="gesture-btn" data-action="right">
+                  <span>👉 Tilt Right (Steer)</span>
+                </button>
+                <button type="button" class="gesture-btn" data-action="brake">
+                  <span>✋ Open Palm (Brake)</span>
+                </button>
+                <button type="button" class="gesture-btn active" data-action="straight">
+                  <span>👌 Neutral</span>
+                </button>
+              </div>
+              <p class="sim-tip">💡 Tip: You can also use Keyboard Arrow Keys (Left / Right / Up / Down) or WASD to test responsiveness!</p>
+            </div>
+          </div>
+
+          <!-- TAB 3: PIPELINE ARCHITECTURE -->
+          <div class="tab-content" id="tab-pipeline">
+            <div class="pipeline-flow">
+              <div class="pipe-step">
+                <div class="pipe-num">STAGE 01</div>
+                <div class="pipe-title">Video Feed Acquisition</div>
+                <div class="pipe-desc">OpenCV captures raw 30 FPS RGB frames from standard webcam sensor.</div>
+              </div>
+              <div class="pipe-arrow">➜</div>
+              <div class="pipe-step">
+                <div class="pipe-num">STAGE 02</div>
+                <div class="pipe-title">Landmark Extraction</div>
+                <div class="pipe-desc">MediaPipe maps 21 keypoints per hand in normalized coordinate space.</div>
+              </div>
+              <div class="pipe-arrow">➜</div>
+              <div class="pipe-step">
+                <div class="pipe-num">STAGE 03</div>
+                <div class="pipe-title">Gesture Logic & State</div>
+                <div class="pipe-desc">Python classifier identifies tilts (angles) and finger extensions (acceleration/braking).</div>
+              </div>
+              <div class="pipe-arrow">➜</div>
+              <div class="pipe-step">
+                <div class="pipe-num">STAGE 04</div>
+                <div class="pipe-title">Pygame Game Loop</div>
+                <div class="pipe-desc">Emits low-latency directional movement events to update car velocity and track position.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Certifications Section (Styled after Reference Image 4)
+       ========================================================================== -->
+  <section class="certifications-section" id="certifications">
+    <div class="container">
+      <div class="section-tag reveal">// 05. CERTIFICATIONS & BADGES</div>
+      <h2 class="section-title reveal">
+        Verified Proof of <span class="text-gradient">Competence</span>
+      </h2>
+      <p class="section-subtitle reveal">
+        Industry and institutional credentials verifying technical competence and continuous learning.
+      </p>
+
+      <div class="cert-grid">
+        <!-- Certificate 1: MongoDB -->
+        <div class="cert-card reveal">
+          <div class="cert-card-preview">
+            <div class="cert-badge-emblem">
+              🍃
+            </div>
+            <div class="cert-watermark">MongoDB, Inc. Credential</div>
+          </div>
+          <div class="cert-card-body">
+            <div class="cert-tags-row">
+              <span class="cert-pill">DATABASE • NOSQL</span>
+              <span class="cert-date">Oct 2024</span>
+            </div>
+            <h3 class="cert-title">MongoDB and the Document Model</h3>
+            <div class="cert-issuer">Issued by MongoDB, Inc.</div>
+            <p class="cert-description">
+              Verified completion of MongoDB document design model, BSON data modeling, document structures, and scalable database query concepts.
+            </p>
+            <button type="button" class="cert-action-btn open-cert-modal" data-cert="mongodb">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              <span>View Credential Details</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Certificate 2: Spring Boot -->
+        <div class="cert-card reveal reveal-delay-1">
+          <div class="cert-card-preview">
+            <div class="cert-badge-emblem">
+              🌱
+            </div>
+            <div class="cert-watermark">Infosys Springboard</div>
+          </div>
+          <div class="cert-card-body">
+            <div class="cert-tags-row">
+              <span class="cert-pill">SPRING 5 • BACKEND</span>
+              <span class="cert-date">Mar 2025</span>
+            </div>
+            <h3 class="cert-title">Spring 5 Basics with Spring Boot</h3>
+            <div class="cert-issuer">Issued by Infosys Springboard</div>
+            <p class="cert-description">
+              Comprehensive certification in Spring Framework 5 architecture, Inversion of Control, Dependency Injection, and modern Spring Boot applications.
+            </p>
+            <button type="button" class="cert-action-btn open-cert-modal" data-cert="springboot">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              <span>View Credential Details</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Certificate 3: AI & ML -->
+        <div class="cert-card reveal reveal-delay-2">
+          <div class="cert-card-preview">
+            <div class="cert-badge-emblem">
+              🤖
+            </div>
+            <div class="cert-watermark">Besant Technologies</div>
+          </div>
+          <div class="cert-card-body">
+            <div class="cert-tags-row">
+              <span class="cert-pill">AI & ML • PYTHON</span>
+              <span class="cert-date">Oct 2025</span>
+            </div>
+            <h3 class="cert-title">AI & ML Training Program</h3>
+            <div class="cert-issuer">Issued by Besant Technologies</div>
+            <p class="cert-description">
+              Hands-on training program in Machine Learning fundamentals, predictive modeling, statistical preprocessing, model tuning, and data analytics.
+            </p>
+            <button type="button" class="cert-action-btn open-cert-modal" data-cert="aiml">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              <span>View Credential Details</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Contact Section (Styled after Reference Images 2 & 3)
+       ========================================================================== -->
+  <section class="contact-section" id="contact">
+    <div class="container">
+      <div class="section-tag reveal">// GET IN TOUCH</div>
+      <h2 class="section-title reveal">
+        Let's make something <span class="text-gradient">awesome together!</span>
+      </h2>
+      <p class="section-subtitle reveal">
+        I'm currently open to internship opportunities and software developer roles. Whether you have a question or just want to say hi, feel free to reach out!
+      </p>
+
+      <div class="contact-grid">
+        <!-- Left Column: Direct Contact Info (Reference Image 2) -->
+        <div class="contact-info-panel reveal">
+          <h3 style="font-size: 1.5rem; font-weight: 800; margin-bottom: 0.5rem; color: var(--text-primary);">Let's connect</h3>
+          <p style="color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 1.5rem; line-height: 1.6;">
+            I am currently open to freelance work, software developer positions, and internship opportunities.
+          </p>
+
+          <!-- Email Pill Card -->
+          <div class="contact-card-item" data-copy="swethadurai2k@gmail.com" data-copy-label="Email address">
+            <div class="contact-icon-box">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div class="contact-details">
+              <div class="contact-lbl">EMAIL ADDRESS</div>
+              <div class="contact-val">swethadurai2k@gmail.com</div>
+            </div>
+            <span class="contact-copy-hint">Click to copy 📋</span>
+          </div>
+
+          <!-- Phone Pill Card -->
+          <div class="contact-card-item" data-copy="+917094186213" data-copy-label="Phone number">
+            <div class="contact-icon-box">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </div>
+            <div class="contact-details">
+              <div class="contact-lbl">PHONE / WHATSAPP</div>
+              <div class="contact-val">+91 7094186213</div>
+            </div>
+            <span class="contact-copy-hint">Click to copy 📋</span>
+          </div>
+
+          <!-- LinkedIn Card -->
+          <a href="https://www.linkedin.com/in/maharasi-m-637954370?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer" class="contact-card-item">
+            <div class="contact-icon-box" style="color: #0a66c2;">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            </div>
+            <div class="contact-details">
+              <div class="contact-lbl">LINKEDIN</div>
+              <div class="contact-val">maharasi-m-637954370</div>
+            </div>
+            <span class="contact-copy-hint">Visit Profile ↗</span>
+          </a>
+
+          <!-- Location Card -->
+          <div class="contact-card-item">
+            <div class="contact-icon-box" style="color: #10b981;">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div class="contact-details">
+              <div class="contact-lbl">LOCATION</div>
+              <div class="contact-val">Tirunelveli, Tamil Nadu, India</div>
+            </div>
+          </div>
+
+          <!-- Social Icon Bar -->
+          <div class="social-links-bar">
+            <a href="https://www.linkedin.com/in/maharasi-m-637954370?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer" class="social-icon-btn" title="LinkedIn Profile">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            </a>
+            <a href="mailto:swethadurai2k@gmail.com" class="social-icon-btn" title="Send Email">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </a>
+            <a href="tel:+917094186213" class="social-icon-btn" title="Call Direct">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Column: Interactive Form (Reference Image 3) -->
+        <div class="contact-form-panel reveal reveal-delay-1">
+          <form id="contact-form">
+            <div class="form-group">
+              <label class="form-label" for="user-name">Your Name <span class="req">*</span></label>
+              <input type="text" id="user-name" name="name" class="form-input" placeholder="e.g. John Doe" required>
+            </div>
+
+            <div class="form-row-2">
+              <div class="form-group">
+                <label class="form-label" for="user-company">Company / Role <span style="color: var(--text-muted);">(Optional)</span></label>
+                <input type="text" id="user-company" name="company" class="form-input" placeholder="e.g. Tech Corp / HR">
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="user-phone">Phone Number <span style="color: var(--text-muted);">(Optional)</span></label>
+                <input type="tel" id="user-phone" name="phone" class="form-input" placeholder="+91 XXXXX XXXXX">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="user-email">Email Address <span class="req">*</span></label>
+              <input type="email" id="user-email" name="email" class="form-input" placeholder="you@company.com" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="user-message">Message <span class="req">*</span></label>
+              <textarea id="user-message" name="message" class="form-textarea" placeholder="Tell me about your project, internship opportunity, or interview schedule..." required></textarea>
+            </div>
+
+            <button type="submit" class="form-submit-btn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+              <span>Send Message</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Footer
+       ========================================================================== -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-left">
+        <a href="#home" class="brand-logo" style="display: inline-flex;">
+          <span class="brand-badge">&lt;M/&gt;</span>
+          <span class="brand-text">MAHARASI<span class="brand-domain">.dev</span></span>
+        </a>
+        <p>© 2026 Maharasi M. Built with semantic HTML, modern CSS, and performant JavaScript.</p>
+      </div>
+
+      <div class="footer-links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#education">Education</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#certifications">Certificates</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       Modals: Resume Viewer & Certificate Details
+       ========================================================================== -->
+
+  <!-- 1. Resume Viewer Modal -->
+  <div class="modal-backdrop" id="resume-modal" role="dialog" aria-modal="true" aria-labelledby="resume-modal-title">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h3 id="resume-modal-title">Official Resume &bull; Maharasi M</h3>
+        <button type="button" class="modal-close-btn" aria-label="Close modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="resume-paper">
+          <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.25rem;">
+            <div>
+              <h1>MAHARASI M</h1>
+              <div class="res-subtitle">MCA Student | Python | HTML | CSS | SQL</div>
+            </div>
+            <div style="text-align: right; font-size: 0.88rem; color: #475569;">
+              <div>📍 Tirunelveli, Tamil Nadu</div>
+              <div>📞 +91 7094186213</div>
+              <div>✉️ swethadurai2k@gmail.com</div>
+              <div>🔗 <a href="https://www.linkedin.com/in/maharasi-m-637954370?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer" style="color: #0284c7;">LinkedIn Profile</a></div>
+            </div>
+          </div>
+
+          <div class="res-section-title">PROFILE SUMMARY</div>
+          <p>
+            Motivated MCA student with a strong interest in software development and data analytics. Seeking an internship opportunity to apply my technical skills, gain practical experience, and contribute to real-world projects.
+          </p>
+
+          <div class="res-section-title">EDUCATION</div>
+          <div style="margin-bottom: 0.85rem;">
+            <strong>Francis Xavier Engineering College, Tirunelveli</strong> — Master of Computer Applications (MCA)<br>
+            <span style="color: #64748b; font-size: 0.85rem;">2026 – Present</span>
+            <p style="margin-top: 0.25rem;">Currently pursuing MCA with an interest in software development and data analytics.</p>
+          </div>
+          <div style="margin-bottom: 0.85rem;">
+            <strong>St. John's College, Tirunelveli</strong> — Bachelor of Computer Applications (BCA)<br>
+            <span style="color: #64748b; font-size: 0.85rem;">2023 – 2026 | 83%</span>
+          </div>
+          <div style="margin-bottom: 0.85rem;">
+            <strong>Sarah Tucker Higher Secondary School, Tirunelveli</strong> — HSC<br>
+            <span style="color: #64748b; font-size: 0.85rem;">2023 | 87.67%</span>
+          </div>
+
+          <div class="res-section-title">PROJECTS</div>
+          <div>
+            <strong>Gesture Controlled Gaming AI using Real-Time Computer Vision</strong><br>
+            <span style="color: #0284c7; font-size: 0.85rem; font-weight: 600;">Technologies: Python, Machine learning, OpenCV, MediaPipe, Pygame</span>
+            <ul>
+              <li>Developed a Machine learning-based gesture recognition system for real-time game control.</li>
+              <li>Processed webcam input using OpenCV and MediaPipe to detect and track hand gestures.</li>
+              <li>Implemented gesture-based controls to interact with a Pygame car racing game.</li>
+              <li>Integrated real-time gesture recognition with the gaming application to provide an interactive user experience.</li>
+            </ul>
+          </div>
+
+          <div class="res-section-title">CERTIFICATES</div>
+          <ul>
+            <li><strong>MongoDB and the Document Model</strong> — MongoDB, Inc. — October 2024</li>
+            <li><strong>Spring 5 Basics with Spring Boot</strong> — Infosys Springboard — March 2025</li>
+            <li><strong>AI & ML Training Program</strong> — Besant Technologies — October 2025</li>
+          </ul>
+
+          <div class="res-section-title">TECHNICAL SKILLS</div>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; font-size: 0.88rem;">
+            <div><strong>Programming:</strong> Python, C</div>
+            <div><strong>Web Technologies:</strong> HTML, CSS</div>
+            <div><strong>Database:</strong> SQL</div>
+            <div><strong>AI & Machine Learning:</strong> AI & ML Basics</div>
+            <div><strong>Computer Vision:</strong> OpenCV, MediaPipe</div>
+            <div><strong>Tools:</strong> Jupyter Notebook, Git, VS Code</div>
+          </div>
+
+          <div class="res-section-title">LANGUAGES</div>
+          <p>Tamil — Native &bull; English — Professional Working Proficiency</p>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary modal-close-btn">Close</button>
+        <button type="button" class="btn btn-primary" id="print-resume-btn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+          <span>Print / Save as PDF</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. Certificate Detail Modal -->
+  <div class="modal-backdrop" id="cert-modal" role="dialog" aria-modal="true" aria-labelledby="cert-modal-title">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h3 id="cert-modal-title">Certificate Details</h3>
+        <button type="button" class="modal-close-btn" aria-label="Close modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div style="color: var(--accent-cyan); font-family: var(--font-mono); font-size: 0.88rem; margin-bottom: 0.5rem;" id="cert-modal-issuer"></div>
+        <p style="color: var(--text-secondary); font-size: 1rem; line-height: 1.6; margin-bottom: 1.5rem;" id="cert-modal-summary"></p>
+        
+        <h4 style="color: var(--text-primary); font-size: 1.05rem; margin-bottom: 0.75rem;">Key Competencies & Course Syllabus:</h4>
+        <ul style="color: var(--text-secondary); line-height: 1.8; list-style: disc; padding-left: 1.25rem;" id="cert-modal-topics">
+          <!-- Populated by JS -->
+        </ul>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary modal-close-btn">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Back to Top Button -->
+  <button type="button" class="back-to-top" id="back-to-top" aria-label="Back to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+</body>
+</html>
